@@ -1,5 +1,6 @@
 let body = $response.body
 
+console.log('v2.0')
 console.log(body)
 
 Date.prototype.format = function (fmt) {
