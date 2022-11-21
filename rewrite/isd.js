@@ -50,7 +50,7 @@ try {
 
     jsonBody.msg.data = results.map((item, index) => {
       const offest = getDay(-(index + 1))
-      const replace = JSON.stringify(item).replace(/202.-..-../g, offest)
+      const replace = JSON.stringify(item).replace(/202.-..-.. ../g, `${offest} 23`)
       return JSON.parse(replace)
     })
   } else {
