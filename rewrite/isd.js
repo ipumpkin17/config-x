@@ -1,6 +1,6 @@
 let body = $response.body
 
-console.log('v2.0')
+console.log('v2.1')
 console.log(body)
 
 Date.prototype.format = function (fmt) {
@@ -50,8 +50,8 @@ try {
     }
 
     jsonBody.msg.data = results.map((item, index) => {
-      const offest = getDay(-(index + 1))
-      const replace = JSON.stringify(item).replace(/202.-..-.. ../g, `${offest} 23`)
+      const offest = getDay(-index)
+      const replace = JSON.stringify(item).replace(/202.-..-.. ../g, `${offest} 00`)
       return JSON.parse(replace)
     })
   } else {
